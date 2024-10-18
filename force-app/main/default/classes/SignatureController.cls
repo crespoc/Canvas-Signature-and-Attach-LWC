@@ -7,12 +7,12 @@ public with sharing class SignatureController {
             
             Attachment attachment = new Attachment();
             attachment.ParentId = recordId;
-            attachment.Name = 'Firma.png';
+            attachment.Name = 'Signature.png';
             attachment.Body = signatureBlob;
             attachment.ContentType = 'image/png';
             insert attachment;
         } catch (Exception e) {
-            throw new AuraHandledException('Error al guardar la firma: ' + e.getMessage());
+            throw new AuraHandledException('Error saving signature: ' + e.getMessage());
         }
     }
 }

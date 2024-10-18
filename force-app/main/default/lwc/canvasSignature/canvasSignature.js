@@ -55,8 +55,8 @@ export default class CanvasSignature extends LightningElement {
             // mostrar el mensaje de firma guardada
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Éxito',
-                    message: 'Firma guardada como adjunto.',
+                    title: 'Success',
+                    message: 'Success save signature.',
                     variant: 'success',
                 })
             );
@@ -65,7 +65,7 @@ export default class CanvasSignature extends LightningElement {
         .catch(error => {
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error al guardar firma',
+                    title: 'Error saving signature',
                     message: error.body.message,
                     variant: 'error',
                 })
