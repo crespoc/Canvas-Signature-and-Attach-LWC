@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Firma" icon-name="utility:signature">
+        <div class="slds-box slds-m-around_medium">
+            <canvas lwc:dom="manual" class="signature-canvas" width="500" height="240"></canvas>
+        </div>
+        <div class="slds-m-top_medium">
+            <lightning-button label="Guardar Firma" onclick={saveSignature}></lightning-button>
+            <lightning-button label="Borrar" variant="destructive" onclick={clearSignature}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
+
