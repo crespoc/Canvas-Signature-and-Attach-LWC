@@ -1,0 +1,11 @@
+<apex:page renderAs="pdf" standardController="Account" extensions="AccountPDFController">
+    <h1>Account Details</h1>
+    
+    <p><strong>Account Name:</strong> {!Account.Name}</p>
+    <p><strong>Phone:</strong> {!Account.Phone}</p>
+    <p><strong>Industry:</strong> {!Account.Industry}</p>
+    <p><strong>Annual Revenue:</strong> {!Account.AnnualRevenue}</p>
+
+    <p><strong>Signature:</strong></p>
+    <apex:image url="{!signatureUrl}" width="500" height="220"/>
+</apex:page>
